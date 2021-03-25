@@ -88,6 +88,11 @@ The process is a collaborative effort where front-end (FE) and back-end (BE) eng
 
 #### Merge workflow
 
+1. Implement provider state (back-end)
+2. Merge provider tests (back-end)
+3. Implement consumer test (front-end)
+4. Merge consumer test (front-end)
+
 Pact tests must be merged in the correct order in order for tests to pass on CI. The provider tests in the back-end must be merged first; contracts will fail until the API endpoint is supported on the provider side. Once the provider test is merged, the consumer test for the front-end can be implemented and merged. Provider states have to be implemented first for the consumer test to pass Pact verification.
 
 #### Front-end workflow
